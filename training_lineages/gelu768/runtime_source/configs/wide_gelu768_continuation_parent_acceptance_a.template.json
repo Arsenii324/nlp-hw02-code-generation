@@ -1,0 +1,28 @@
+{
+  "schema": "wide_gelu768_origin0_resume_parent_acceptance_a_v1",
+  "root_accepted": false,
+  "complete": false,
+  "architecture": "gelu768",
+  "counter_origin": 0,
+  "source_freeze_sha256": "f2223a305d46488662f3baf2877f03c5c82291a6322a0e4e344388671a4ab51b",
+  "runtime_archive_sha256": "5b7713f7e6a8a66c403853b9c0db4eab758f23f7dd3f9547051e7ddea81ae833",
+  "pointer_sha256": null,
+  "contract_sha256": null,
+  "files_sha256": {
+    "data_stats.json": null,
+    "last_training.pt": null,
+    "metrics.json": null,
+    "model.pt": null,
+    "run_config.json": null,
+    "tokenizer.json": null,
+    "validation.json": null,
+    "validation_legacy.json": null
+  },
+  "actual_endpoint_step": null,
+  "actual_selected_best_step": null,
+  "selected_best_vs_endpoint_roles_checked": false,
+  "CPU_fullstate_integrity_evidence": {
+    "path": null,
+    "sha256": null
+  }
+}

@@ -1,0 +1,7 @@
+ipykernel<8,>=6.29
+pyarrow>=18
+nbformat>=5.10
+
+[gpu]
+torch>=2.4
+wandb>=0.18

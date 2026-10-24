@@ -1,0 +1,56 @@
+{
+  "schema": "wide_origin0_resume_parent_a_v1",
+  "verified_actual_values": true,
+  "architecture": "gelu512",
+  "artifact_root": "/workspace/nlp-job-20261023a/fullpopulation-stage-20261024a/parent",
+  "root_parent_acceptance": {
+    "path": "evidence/root_parent_acceptance_ROOT_ACCEPTED.json",
+    "sha256": "d53adf6a23f32ba50bb4ef648aed171889c5289942c1feaf496bfbdf52e2c517"
+  },
+  "pointer": {
+    "path": "latest_checkpoint.json",
+    "sha256": "f5e40db9216611d30a96e898cdb773189211b6a1642ecbea588ea998618b80c1"
+  },
+  "parent_contract": {
+    "path": "evidence/native_parent_contract.json",
+    "sha256": "d73de8b21e1b4c0615fa9db9efef874fb6cf5f9e7cfb6d9116e6a2cb2cc93c69"
+  },
+  "parent_archive": {
+    "path": "evidence/source.bin",
+    "sha256": "97494fb88adab12d244716a782b079b74f3072ae11f5f17166c5f22159c857bd"
+  },
+  "projection": {
+    "data_stats.json": {
+      "path": "roles/data_stats.json",
+      "sha256": "a42b2b8aa5e6d444214f2b3b65219e8d604e432058c42c0b3ead1a5358a1fb67"
+    },
+    "last_training.pt": {
+      "path": "roles/last_training.pt",
+      "sha256": "83c3dcf34b713e9f0c4275a4b359c5795bb619dba4df127ac044a680c7c8fce6"
+    },
+    "metrics.json": {
+      "path": "roles/metrics.json",
+      "sha256": "9a8c0f4f274cd08f093c9d2c423c1be2e1a54c56dd19d0924e97be39ac773db0"
+    },
+    "model.pt": {
+      "path": "roles/model.pt",
+      "sha256": "81fd42627751284c7ed61d23fa3aec76f8a2c34f857ae9f78d5bd12155068306"
+    },
+    "run_config.json": {
+      "path": "roles/run_config.json",
+      "sha256": "6a3b001fb23a89eccfb8fcafb813a0f017fe0be34a1372725fa1b28c5452f11b"
+    },
+    "tokenizer.json": {
+      "path": "roles/tokenizer.json",
+      "sha256": "0fa06854a98e82cd520c13f4c670040c772fec38f2cd2cacb5de11130bc42d74"
+    },
+    "validation.json": {
+      "path": "roles/validation.json",
+      "sha256": "73ac2a8b8ea0c16c2eec38c219b62f46857cdfe3de7fab3cab64754aa8b4c24e"
+    },
+    "validation_legacy.json": {
+      "path": "roles/validation_legacy.json",
+      "sha256": "d6a922705f41486208f8f68199bd18ebb4dea74c3b04ab106aed48d4c5d0c7dd"
+    }
+  }
+}

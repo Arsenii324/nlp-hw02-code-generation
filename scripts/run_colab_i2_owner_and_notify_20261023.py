@@ -1,0 +1,14 @@
+"""Run the approved I owner once, then enqueue one same-thread handoff."""
+from pathlib import Path
+import json,subprocess,hashlib,datetime,os
+R=Path(__file__).resolve().parents[1];E=R/'reports/evidence/colab_continuation_launch_20261023i2';S=R/'.worktrees/strong-inference-fallback-20261022/artifacts/colab/continuation-i-owner-20261023g';M=E/'owner_manifest_BOUND.json';OUT=R/'artifacts/colab/continuation-i2-20261023g';thread='01a0f8a6-39b5-7192-9210-9b807ffa438f'
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest();now=lambda:datetime.datetime.now(datetime.timezone.utc).isoformat()
+assert sha(M)=='99e7ba13a84ad4b5ac437b12e3df49e2aa222295a05bbc1c4f83c3efc05131e5';assert sha(S/'scripts/colab_single_bucket_h_lifecycle.py')=='edeb5467b7ba189367b150f209df6a09200bb6abdd181a11cad550b0f54f4f68';assert not(E/'owner_launch.json').exists() and not OUT.exists()
+argv=[str(R/'.venv/bin/python'),str(S/'scripts/colab_single_bucket_h_lifecycle.py'),'--stage',str(S),'--owner-manifest',str(M),'--expected-owner-manifest-sha256',sha(M),'--recovery',str(OUT),'--execute']
+with(E/'controller.log').open('w') as log:
+ p=subprocess.Popen(argv,cwd=R,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+ (E/'owner_launch.json').write_text(json.dumps({'utc':now(),'pid':p.pid,'wrapper_pid':os.getpid(),'argv':argv,'session_name':'nlp-hw02-continuation-20261023i','new_allocation_by_owner':False},indent=2)+'\n');rc=p.wait()
+record={'utc':now(),'owner_exit_code':rc,'session_name':'nlp-hw02-continuation-20261023i','owner_result_path':str(OUT/'owner-result.json'),'owner_result_sha256':sha(OUT/'owner-result.json') if(OUT/'owner-result.json').exists() else None};(E/'completion.json').write_text(json.dumps(record,indent=2)+'\n')
+event=hashlib.sha256(('colabI2|'+sha(M)).encode()).hexdigest()[:24];message=f'Automated Colab owner handoff. Event {event}. First record actual receipt in reports/evidence/completion_callbacks/{event}.receipt.json with current UTC/thread ID. Read START_HERE.md, reports/HANDOFF.md, reports/evidence/colab_continuation_launch_20261023i2/completion.json and artifacts/colab/continuation-i2-20261023g/owner-result.json. Inspect exact owned-session/terminal/recovery/stop state and actual outputs; continue already-authorized benchmark work respecting latest instructions. No new authorization, submission, duplicate allocation/rerun or destructive cleanup. Halt affected compute on actual refusal/exhaustion. Acknowledge automatic resumption; reconcile if already reviewed while active.'
+p=subprocess.run([str(Path('/Users/a2mogus/.local/bin/codex')),'queue','--thread',thread,'--message',message],cwd=R,capture_output=True,text=True,timeout=120)
+(E/'completion_callback.json').write_text(json.dumps({'utc':now(),'event_id':event,'enqueue_succeeded':p.returncode==0,'returncode':p.returncode,'agent_receipt_observed':False,'stdout':p.stdout,'stderr':p.stderr},indent=2)+'\n')

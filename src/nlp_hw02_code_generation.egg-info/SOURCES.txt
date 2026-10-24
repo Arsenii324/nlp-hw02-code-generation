@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/nlp_hw02/__init__.py
+src/nlp_hw02/credentials.py
+src/nlp_hw02/paths.py
+src/nlp_hw02_code_generation.egg-info/PKG-INFO
+src/nlp_hw02_code_generation.egg-info/SOURCES.txt
+src/nlp_hw02_code_generation.egg-info/dependency_links.txt
+src/nlp_hw02_code_generation.egg-info/requires.txt
+src/nlp_hw02_code_generation.egg-info/top_level.txt

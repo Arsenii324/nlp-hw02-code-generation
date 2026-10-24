@@ -1,0 +1,42 @@
+{
+  "schema": "owned_committed_snapshot_a_v1",
+  "complete": true,
+  "fullstate_deserialized": false,
+  "files": {
+    "data_stats.json": {
+      "sha256": "7db78ca8f775bfd82180be6fc6e735705cc853817479aed79706e0c2cfb36aa4",
+      "bytes": 21336
+    },
+    "last_training.pt": {
+      "sha256": "ef55e7b385fba95279e05bd350e5637bf25ae26c2cc74cb1bec2d49ac91634e7",
+      "bytes": 251241731
+    },
+    "metrics.json": {
+      "sha256": "1923f4c8d8960673f96eefaac4f88959265552a362cce745354161597a4b835a",
+      "bytes": 9643
+    },
+    "model.pt": {
+      "sha256": "fd5bbeeadc8f451a2d47c740d73a38e75d3e5cdb65b72194e5065a138c161462",
+      "bytes": 122886673
+    },
+    "run_config.json": {
+      "sha256": "bfd27be239e48a87fe8f5c7bf3847533e6acf6cdd05f76931b7dbc4f720b7b1b",
+      "bytes": 87695
+    },
+    "tokenizer.json": {
+      "sha256": "0fa06854a98e82cd520c13f4c670040c772fec38f2cd2cacb5de11130bc42d74",
+      "bytes": 122848
+    },
+    "validation.json": {
+      "sha256": "73ac2a8b8ea0c16c2eec38c219b62f46857cdfe3de7fab3cab64754aa8b4c24e",
+      "bytes": 1310826
+    },
+    "validation_legacy.json": {
+      "sha256": "d6a922705f41486208f8f68199bd18ebb4dea74c3b04ab106aed48d4c5d0c7dd",
+      "bytes": 1529630
+    }
+  },
+  "started_UTC": "2026-10-24T10:34:46Z",
+  "absolute_step": 662144,
+  "pointer_sha256": "b4e0271814bbf816aaee1a88386efa662baf98f5129f7fad4cf8060dd8ae5b73"
+}

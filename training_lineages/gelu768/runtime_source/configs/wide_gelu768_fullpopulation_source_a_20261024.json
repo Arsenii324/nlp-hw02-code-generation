@@ -1,0 +1,63 @@
+{
+  "schema": "wide_gelu768_fullpopulation_source_a_v1",
+  "status": "SOURCE_ONLY_UNBOUND_PENDING_INDEPENDENT_REVIEW",
+  "verified_actual_values": false,
+  "source_sha256": {
+    "scripts/train_wide_gelu768_fullpopulation_a.py": "8dd2b26df1f92997a99211d57ec16abd8acb33b9a5466e3896cb3f5c2ee1bd76",
+    "scripts/run_wide_gelu768_fullpopulation_a.py": "f98a2cdd6db261150e1bbb1c548e2dc1ac669fc8e86cc85cc7263f17e8430cda",
+    "src/nlp_hw02/wide_gelu768_fullpopulation_a.py": "0c9f27068bfeebe3f27f49b90625b8e405dec97983a08877bc42fc56c7cf3534",
+    "configs/wide_gelu768_fullpopulation_training_a.template.json": "11550329391efe15def5f89600df3c34a02601af3fd997b72f20853f69b500e0",
+    "configs/wide_gelu768_fullpopulation_input_packet_a.template.json": "ec4aef5dd178ae2de0660ce757095e4bb950835f51e33cef30f7f65591c65203",
+    "src/nlp_hw02/wide_gelu768_origin0_resume_a.py": "6f3c2a6582fa2f9124ac8c48925248f1468c5cdaa593301466cac58ec2fd3b6c",
+    "configs/wide_gelu768_continuation_parent_a.template.json": "628be4f26e9a9ae94bf92afdf5aa7e16c4765e86f3e3e280af32e087417660fa",
+    "configs/wide_gelu768_continuation_parent_acceptance_a.template.json": "cb34e299e562ad39ef5a69306af918d5da2966bab0eecc1116f04381886f893d",
+    "src/nlp_hw02/wide_continuation_schedule_a.py": "9533ca39a5765a9b81403613f3f7649d2cba6e680e4d76d624a63b6857cefe9e",
+    "src/nlp_hw02/wide_scratch_recipe_a.py": "21df6a54934c346cdaab69378c41292fe0c150b4cb837aed634edc183e403de0",
+    "src/nlp_hw02/compile_engine_observer_a.py": "ff88ec5d7699f545c4ee43d15e920a9cbcaaa7d3f0189ca1a7d5ec97632abd84"
+  },
+  "plan": {
+    "path": "docs/plans/2026-10-24-gelu768-fullpopulation-continuation.md",
+    "sha256": "5d9aac9fa6c1d28a29d8ec83ab5aac539194fee068dc4f4836dd660eb6bd9a15"
+  },
+  "donor512_fullpopulation_freeze_sha256": "ac069fca9e920ba538854175b1aa6add12a1a2e1460512bf287093ae866333e4",
+  "donor512_actual_archive_sha256": "27a4c82d2fdfb86eac03b7b82c91ac215ea048f6bfbe455555797ff69a8430bb",
+  "parent_F_freeze_sha256": "f2223a305d46488662f3baf2877f03c5c82291a6322a0e4e344388671a4ab51b",
+  "parent_F_archive_sha256": "5b7713f7e6a8a66c403853b9c0db4eab758f23f7dd3f9547051e7ddea81ae833",
+  "strict_F_loader_sha256": "6f3c2a6582fa2f9124ac8c48925248f1468c5cdaa593301466cac58ec2fd3b6c",
+  "parent_family": "original_GELU768F_origin0_complete400000_endpoint_only",
+  "parameters": 68078688,
+  "unique_xsa_scalars": 96,
+  "config": {
+    "d_model": 768,
+    "heads": 12,
+    "encoder_layers": 4,
+    "decoder_layers": 4,
+    "ff": 3072,
+    "activation": "gelu"
+  },
+  "counter_origin": 0,
+  "new_training_family": "wide_gelu768_fullpopulation_continuation_a_v1",
+  "new_rows": 11811850,
+  "old_rows": 6000000,
+  "new_schedule": "absolute_lr(actual_parent_step)*(1-NEW/fixed_H)",
+  "schedule_mode": "linear_cooldown",
+  "engine": "eager",
+  "full_cache_manifest_sha256": "695ad7d4acf0a9ff3b95249439ada6033fdc6db8693eaca33fbad1959fe9d9f9",
+  "new_sampler_policy": "Explicit fresh population raw/layout seeds; inherited TorchRNG/moments/scaler retained, no old6M example-stream continuity claim",
+  "actual_parent_model_H_seeds_deadline_device": null,
+  "planned_H_estimate_not_binding": 131072,
+  "owner_maximum_end_UTC": "2026-10-24T12:00:00Z",
+  "actual_runtime_archive_built": false,
+  "actual_stage_built": false,
+  "provider_or_model_execution": false,
+  "descendant_resume_supported": false,
+  "inference_and_monitor_adapter_implemented": false,
+  "dependent_gates": [
+    "Actual originalF400k committed8roles/pointer/root acceptance and separate CEbest vs endpoint",
+    "Actual unchanged full-cache SHA+coverage/readiness and root runtime/member closure",
+    "Same hardware/backend/NumPy, strict moments/scaler/state restore and initial endpoint CE tolerance",
+    "Root actual seeds/fixedH/time/resource choice, retained1024 physical feasibility; no silentH shortening",
+    "Independent source review, later archive/stage readback and root one-owned-launch decision",
+    "Future explicit monitor job and this new-family inference CPU/lineage protocol; no sourceF/512 relabel"
+  ]
+}

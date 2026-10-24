@@ -1,0 +1,11 @@
+from pathlib import Path
+import hashlib,importlib.util,json,sys
+sys.dont_write_bytecode=True
+R=Path(__file__).resolve().parents[1];S=R/'artifacts/kaggle/fullrange-paired-n24-20261023c';T=S/'tools'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+before={str(p.relative_to(S)):sha(p) for p in S.rglob('*') if p.is_file()};source=T/'scripts/fullrange_sampling_contract_c.py';l=importlib.util.spec_from_file_location('staged_C_stdlib_verifier_only',source);a=importlib.util.module_from_spec(l);l.loader.exec_module(a);results={};m=json.loads((T/'fullrange_pair_sampling_manifest_a.json').read_text())
+for role in m['role_order']:
+ p=T/m['roles'][role]['contract_path'];spec=json.loads(p.read_text());spec['training']['artifact_root']=str(T/'training_projection');spec['training']['tools_root']=str(T/'training_tools');spec['input_root']=str(T/'inputs');i,files,inputs,archive=a.verify_training(spec);assert i['model_sha256']==m['roles'][role]['model_sha256'] and i['root_cpu_integrity_sha256']==m['roles'][role]['root_cpu_integrity_sha256'];results[role]={'identity_sha256':hashlib.sha256(json.dumps(i,sort_keys=True,separators=(',',':')).encode()).hexdigest(),'model_sha256':i['model_sha256'],'step':i['step'],'H':i['admitted_NEW_horizon'],'cache_rows':i['current_train_rows'],'slot':i['slot'],'root_cpu_integrity_sha256':i['root_cpu_integrity_sha256']}
+assert 'torch' not in sys.modules and not any(n=='nlp_hw02' or n.startswith('nlp_hw02.') for n in sys.modules)
+after={str(p.relative_to(S)):sha(p) for p in S.rglob('*') if p.is_file()};assert before==after
+out=R/'reports/evidence/fullrange_bucket_cooldown_launch_20261023c/pair_local_preparation/staged_metadata_preflight.json';out.write_text(json.dumps({'schema':'fullrange_C_paired_actual_staged_metadata_preflight_v1','complete':True,'stage_root':str(S),'stage_root_relative':str(S.relative_to(R)),'source_sha256':sha(source),'manifest_sha256':sha(T/'fullrange_pair_sampling_manifest_a.json'),'results':results,'all_stage_file_hashes_unchanged':True,'stage_file_count':len(before),'Torch_model_forward_producer_provider':False,'only3pathfields_bound_inmemory':True},indent=2)+'\n');print(json.dumps({'complete':True,'receipt_sha256':sha(out),'stage_file_count':len(before),'roles':results}))

@@ -1,0 +1,87 @@
+{
+  "schema": "colab_i_preparation_source_v1",
+  "status": "SOURCE_ONLY_UNINVOKED_PENDING_REVIEW",
+  "session_name": "nlp-hw02-continuation-20261023i",
+  "remote_root": "/content/continuation-h",
+  "source": "scripts/colab_i_prepare_inputs_env_20261023.py",
+  "source_sha256": "0ae32b6523a9eca710f0e955692676ee60fa70ee7eda500f72cd496a7bbbfed5",
+  "embedded_source_sha256": {
+    "GEN": "7e6ef7085316031020fd59737d46f90eab45c4092292ca3770f27491a95e8bbe",
+    "TRANSPORT_WORKER": "ea4dddd4edb009b923d18ca4401efb64e5a8b5929ccdd85cd4a6e6bab47e7ee0",
+    "ENV_WORKER": "75e3a5a53a570bff9a07d73680325a7ca7c12e81cb99e586ec9322bab4717154"
+  },
+  "telemetry": {
+    "transport": {
+      "path": "/content/continuation-h/transport-result.json",
+      "schema": "colab_i_direct_input_transport_v1",
+      "complete_fields": [
+        "complete",
+        "status",
+        "session_name",
+        "phase",
+        "identities",
+        "files",
+        "elapsed_seconds",
+        "heartbeat_UTC",
+        "free_before"
+      ],
+      "final_extra": [
+        "seconds",
+        "free_after"
+      ],
+      "file_fields": [
+        "complete",
+        "bytes",
+        "seconds",
+        "sha256_on_success",
+        "error_type_on_failure"
+      ],
+      "heartbeat_seconds": 5
+    },
+    "environment": {
+      "path": "/content/continuation-h/env-result.json",
+      "schema": "colab_i_environment_v1",
+      "fields": [
+        "complete",
+        "status",
+        "session_name",
+        "phase",
+        "seconds",
+        "heartbeat_UTC",
+        "torch_pinned",
+        "venv_without_ensurepip",
+        "software_on_success",
+        "error_type_on_failure"
+      ],
+      "software": {
+        "torch": "2.10.0+cu128",
+        "cuda": "12.8",
+        "count": 1,
+        "gpu_contains": "T4"
+      },
+      "heartbeat_seconds": 5
+    },
+    "parent_layout": {
+      "path": "/content/continuation-h/parent-layout-receipt.json",
+      "schema": "colab_i_parent_layout_v1",
+      "fields": [
+        "complete",
+        "status",
+        "session_name",
+        "files"
+      ],
+      "final_files": 10
+    }
+  },
+  "readiness": "All3 exactschemas/session_name/statuscomplete/completeTrue; transport16/16successSHAs match expectedsource/parent hashes; layout8roles+2rootmetadata; strictsoftware. Rootowner must remainattached/poll<=60s throughoutprep and retainactualafter-provideridentity qualification.",
+  "actual_parentterminal_sha256": "991448f5aab75e7a7e8dad030f05f2a8af9a6327c75133831fade72e0c13e609",
+  "actual_cachemanifest_sha256": "8ce0939534bdb5f2b791d19d0ab13f6b4c79402b8627fecad4e9902cd08bb13c",
+  "no_allocation_stop_training": true,
+  "new_environment_install_qualified": false,
+  "limitations": [
+    "Known ensurepip failure corrected withwithoutpip; actualfullinstall success remainsunverified untilfutureI receipt.",
+    "Launch rootmustbefresh; invokeprep beforeuploadingMLintoitsroot.",
+    "Nativeworkers havePGIDs fromlaunch; owner ownsaggregate absoluteallocationdeadline/cleanup/recovery.",
+    "No liveprovideraction performed inpreparing/freezingthissource."
+  ]
+}

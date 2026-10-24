@@ -1,0 +1,22 @@
+{
+  "schema": "wide_fullpopulation_input_packet_a_v1",
+  "verified_actual_values": false,
+  "source_freeze_sha256": null,
+  "root_source_acceptance": null,
+  "typed_parent_contract": null,
+  "actual_parent_step": null,
+  "new_steps": null,
+  "population_raw_seed": null,
+  "population_layout_seed": null,
+  "new_cache_path": null,
+  "actual_cache_transport_receipt": null,
+  "device": null,
+  "native_end_UTC": null,
+  "reserve_seconds": null,
+  "root_resource_quality_decision": null,
+  "training_contract": "configs/wide_fullpopulation_training_a.template.json",
+  "parent_template_reused": "configs/wide_continuation_parent_a.template.json",
+  "old6M_arrays_required": false,
+  "actual_archive_built": false,
+  "provider_action": false
+}

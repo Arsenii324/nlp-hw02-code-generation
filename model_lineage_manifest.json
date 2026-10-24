@@ -1,0 +1,91 @@
+{
+  "schema": "solution_code_model_lineage_metadata_v1",
+  "source_stage_manifest_sha256": "462773c8f5e62a5c72f4dd56963d339870b82f6975bec5dc58a4c23d652290b7",
+  "models": [
+    {
+      "name": "768fp_n8",
+      "architecture": "own768_gelu",
+      "family": "wide_gelu768_fullpopulation_continuation_a_v1",
+      "file": "models/768fp_n8.pt",
+      "sha256": "ea4f5bc5e72d418987bc8fe1439e0afc736a7ae51447aab5363a70d154bd6972",
+      "step": 528000,
+      "validation_loss": 0.21149580623436748,
+      "config": {
+        "activation": "gelu",
+        "d_model": 768,
+        "decoder_layers": 4,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "exclusive_self_attention": false,
+        "ff": 3072,
+        "gated_repeats": false,
+        "heads": 12,
+        "learnable_xsa": true,
+        "loop_order": "stack",
+        "loop_repeats": 1,
+        "loop_share_scope": "block",
+        "max_source": 256,
+        "max_target": 192,
+        "repeat_residual_scale": 0.5,
+        "residual_scale": 1.0,
+        "share_loop_weights": true,
+        "vocab_size": 2048
+      },
+      "training_contract": {
+        "path": "artifacts/native-gelu768-fullpopulation-bound-20261024a/training_contract_ROOT_BOUND.json",
+        "sha256": "788ea2646b7762e900ac742b81e26f15fafd2c794f2a6610872342c81faa43bd"
+      },
+      "snapshot_receipt": {
+        "path": "artifacts/paid-native-backups-57422123/gelu768/20261024T091350-79019/snapshot_receipt.json",
+        "sha256": "cf3e60da43e419848f84651b2ab9415bf5348cf5a8a1233e1ac8d89ae95937af"
+      },
+      "metrics": {
+        "path": "artifacts/paid-native-backups-57422123/gelu768/20261024T091350-79019/metrics.json",
+        "sha256": "b15d4c99055e33ca37385366cf0c8680b0b625782e89613970076a2748b4a035"
+      }
+    },
+    {
+      "name": "512_new_n3",
+      "architecture": "own512_gelu",
+      "family": "wide_fullpopulation_continuation_a_v1",
+      "file": "models/512_new_n3.pt",
+      "sha256": "fd5bbeeadc8f451a2d47c740d73a38e75d3e5cdb65b72194e5065a138c161462",
+      "step": 662144,
+      "validation_loss": 0.22055138446033892,
+      "config": {
+        "activation": "gelu",
+        "d_model": 512,
+        "decoder_layers": 4,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "exclusive_self_attention": false,
+        "ff": 2048,
+        "gated_repeats": false,
+        "heads": 8,
+        "learnable_xsa": true,
+        "loop_order": "stack",
+        "loop_repeats": 1,
+        "loop_share_scope": "block",
+        "max_source": 256,
+        "max_target": 192,
+        "repeat_residual_scale": 0.5,
+        "residual_scale": 1.0,
+        "share_loop_weights": true,
+        "vocab_size": 2048
+      },
+      "training_contract": {
+        "path": "artifacts/native-fullpopulation-longer-bound-20261024b/training_contract_ROOT_BOUND.json",
+        "sha256": "63d0a966d0258236bd2e99f75da25f166a4fe7b7e68b8de871d40373b513bb8f"
+      },
+      "snapshot_receipt": {
+        "path": "artifacts/paid-native-backups-57422123/gelu/20261024T103443-79019/snapshot_receipt.json",
+        "sha256": "181610b52ec54035dcb2525c69557dce929e1ebdb9f0aa79a1f006041b441e1b"
+      },
+      "metrics": {
+        "path": "artifacts/paid-native-backups-57422123/gelu/20261024T103443-79019/metrics.json",
+        "sha256": "1923f4c8d8960673f96eefaac4f88959265552a362cce745354161597a4b835a"
+      }
+    }
+  ],
+  "weights_included": false
+}

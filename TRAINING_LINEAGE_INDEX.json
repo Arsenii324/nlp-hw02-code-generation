@@ -1,0 +1,39 @@
+{
+  "schema": "training_lineage_index_v1",
+  "lineages": [
+    {
+      "name": "gelu768",
+      "contract_path": "training_lineages/gelu768/training_contract_ROOT_BOUND.json",
+      "contract_sha256": "788ea2646b7762e900ac742b81e26f15fafd2c794f2a6610872342c81faa43bd",
+      "parent_binding_sha256": "eabd969d92aa6fb596474b7b079e9182b54d7a6d940ba83676e0f6498b8c4b1e",
+      "runtime_source_archive_sha256": "12afad0a92917b65a37ce21f8d652f04c7af85f2fc7f5058d2135851c41900e7",
+      "runtime_source_member_count": 82,
+      "selected_metrics_sha256": "b15d4c99055e33ca37385366cf0c8680b0b625782e89613970076a2748b4a035",
+      "snapshot_receipt_sha256": "cf3e60da43e419848f84651b2ab9415bf5348cf5a8a1233e1ac8d89ae95937af"
+    },
+    {
+      "name": "gelu512_new",
+      "contract_path": "training_lineages/gelu512_new/training_contract_ROOT_BOUND.json",
+      "contract_sha256": "63d0a966d0258236bd2e99f75da25f166a4fe7b7e68b8de871d40373b513bb8f",
+      "parent_binding_sha256": "0364b61c8f83071a486463926fcb0c86412737b203bd9f08589293a1c405cea5",
+      "runtime_source_archive_sha256": "27a4c82d2fdfb86eac03b7b82c91ac215ea048f6bfbe455555797ff69a8430bb",
+      "runtime_source_member_count": 73,
+      "selected_metrics_sha256": "1923f4c8d8960673f96eefaac4f88959265552a362cce745354161597a4b835a",
+      "snapshot_receipt_sha256": "181610b52ec54035dcb2525c69557dce929e1ebdb9f0aa79a1f006041b441e1b"
+    }
+  ],
+  "frozen_inference_source": {
+    "origin_bundle_sha256": "556f6df84c0a586725c50d9ca0b8bd47df7f01e1aaaa511c0b28e5ff181083bc",
+    "included_python_modules": [
+      "frozen_inference_source/src/nlp_hw02/__init__.py",
+      "frozen_inference_source/src/nlp_hw02/arithmetic.py",
+      "frozen_inference_source/src/nlp_hw02/inference.py",
+      "frozen_inference_source/src/nlp_hw02/mixture1166_runtime.py",
+      "frozen_inference_source/src/nlp_hw02/model.py",
+      "frozen_inference_source/src/nlp_hw02/own_selected_sampling_d.py",
+      "frozen_inference_source/src/nlp_hw02/sampling_candidate.py",
+      "frozen_inference_source/src/nlp_hw02/tokenizer.py"
+    ],
+    "inference_py_override_sha256": "3cfd2844b8c4e3025a0ce5e2dff3428cb26b3582c9ca82347bea612dc7e0e82b"
+  }
+}

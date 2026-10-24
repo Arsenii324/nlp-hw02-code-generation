@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: nlp-hw02-code-generation
+Version: 0.1.0
+Summary: Unsolved HSE NLP HW2 workspace and submission scaffold
+Requires-Python: <3.13,>=3.11
+Requires-Dist: ipykernel<8,>=6.29
+Requires-Dist: pyarrow>=18
+Requires-Dist: nbformat>=5.10
+Provides-Extra: gpu
+Requires-Dist: torch>=2.4; extra == "gpu"
+Requires-Dist: wandb>=0.18; extra == "gpu"

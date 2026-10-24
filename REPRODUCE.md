@@ -1,11 +1,26 @@
-# Reproduction and provenance
+# Reproduction notes
 
-`inference.ipynb` is the exact I test notebook (SHA in `model_metadata.json`). It uses private Kaggle input `arsen4ikvar/nlp-hw02-mixture1166-proof-20261024a-tools`, version1, under `candidate_bundle_v8/`; required checkpoint and tokenizer hashes are listed in model metadata. This package contains no weights.
+This is a source hand-in archive, not a model bundle. Model weights, optimizer/RNG states, token arrays, cached data, raw Parquet shards, `.venv`, Git metadata, credentials, and the canonical submission notebook are intentionally excluded. The final candidate choice was still pending at archive assembly; model metadata for both finalists is included without weights.
 
-The method combines GELU768 selected step528000 (training endpoint531072) N8 with GELU512-new selected step662144 N3, using temperature0.8/top-k50/length penalty0.6/seed20261002 and numeric plurality. The exact output SHA is `f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0`. Two-model configs/contracts and training provenance are recorded in `model_metadata.json` and the included source archive.
+## Selected candidate lineages
 
-I's cold one-T4 test clocks were118.209/151.291/151.211/160.023 seconds (core/executor/notebook/parent); all were <=180s. It ran on one visible Tesla T4, exited0 and reaped its child. G's actual validation output and I's test candidate pool/output match exactly by SHA; G scored1170/1529 on the internal supported-consensus set. I did not generate validation itself.
+The private v13 model manifest identifies two trained candidates:
 
-The user reports708/960=73.75% public score for this exact JSONL (0.1% execution errors, 0% syntax errors). The original user score receipt is `proof/user_reported_public_score.json`. The recommendation and comparisons against the qualified C/H fallback and J checkpoint are in `proof/final_candidate_selection.json`. The public service was not independently queried; no per-question feedback was used for tuning.
+- `768fp_n8`: GELU768 full-population continuation; selected checkpoint step **528,000**, validation loss 0.21149580623436748; training endpoint 531,072. These are distinct: the selected checkpoint is the CE-best model, not the endpoint.
+- `512_new_n3`: GELU512 full-population continuation; selected checkpoint step **662,144** according to its bound terminal metrics and v13 manifest.
 
-Exact retraining is not possible from this package alone because it excludes original parent checkpoints and token cache. The canonical old512 submission notebook/checkpoint remains preserved and was not overwritten. No agent push or official course submission occurred.
+Both use seed 42 and the pinned dataset revision `b2724689ff079e9c22efd548fe134bfb29036dbb`. Their exact training contracts and the source archives referenced by those contracts are stored under `training_lineages/`. The raw dataset and precomputed full-population token arrays are not included.
+
+## Code and dependencies
+
+`src/`, `scripts/`, and `configs/` contain the project source snapshot. `training_lineages/{gelu768,gelu512_new}/runtime_source.bin` is the exact small code/config ZIP archive whose SHA is bound by each training contract; `runtime_source/` is its verified expansion. `frozen_inference_source/src/nlp_hw02/` contains the Python modules from the private v13 candidate bundle. Its `inference.py` is the current local override used by the D notebook builder; all other `.py` files are copied from v13.
+
+The recorded paid training runtime was PyTorch 2.10.0+cu128, CUDA 12.8, NumPy 2.0.2, on one NVIDIA A100-PCIE-40GB. The project GPU extra in `pyproject.toml` currently requests PyTorch >=2.11,<2.12, so it does not reproduce that historical runtime; `uv.lock` is not a complete lock of the paid runtime. Python patch version and every remote package wheel were not recovered in this package. The original wall-clock wrappers also contain an admission cutoff at 2026-10-24 12:00 UTC; that historical gate has passed and is preserved as provenance rather than a ready-to-launch command.
+
+## Limits on exact retraining
+
+The archive contains the actual trainer/wrapper source, frozen runtime archives, full bound configs, and lineage contracts. It does **not** permit an end-to-end exact retraining run by itself: the parent checkpoint/optimizer/RNG states and the full-population token arrays/cache are absent, and no training was rerun while packaging. Obtain the original data at the pinned revision and matching parent state/cache referenced by the contracts before attempting continuation. A source archive SHA proves the code/config bytes; it does not prove a fresh run would reproduce the trained weights bit-for-bit.
+
+## Experiments and evaluation
+
+`experiments/LOG.md` records hypotheses, changes, failures, and measured results; `reports/AGENT_USE.md` records agent involvement; `reports/BASELINE.md` and `reports/TASK_AND_JUDGE.md` cover the existing qualified fallback and evaluation limits. Internal supported-consensus agreement is a proxy, not official pass@1. The exact final inference notebook, test predictions, and proof receipts are delivered separately.

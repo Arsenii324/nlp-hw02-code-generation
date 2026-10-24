@@ -1,0 +1,56 @@
+{
+  "schema": "wide_origin0_resume_parent_a_v1",
+  "verified_actual_values": false,
+  "architecture": null,
+  "artifact_root": null,
+  "root_parent_acceptance": {
+    "path": null,
+    "sha256": null
+  },
+  "pointer": {
+    "path": null,
+    "sha256": null
+  },
+  "parent_contract": {
+    "path": null,
+    "sha256": null
+  },
+  "parent_archive": {
+    "path": null,
+    "sha256": null
+  },
+  "projection": {
+    "last_training.pt": {
+      "path": null,
+      "sha256": null
+    },
+    "model.pt": {
+      "path": null,
+      "sha256": null
+    },
+    "metrics.json": {
+      "path": null,
+      "sha256": null
+    },
+    "run_config.json": {
+      "path": null,
+      "sha256": null
+    },
+    "tokenizer.json": {
+      "path": null,
+      "sha256": null
+    },
+    "validation.json": {
+      "path": null,
+      "sha256": null
+    },
+    "validation_legacy.json": {
+      "path": null,
+      "sha256": null
+    },
+    "data_stats.json": {
+      "path": null,
+      "sha256": null
+    }
+  }
+}

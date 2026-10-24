@@ -1,0 +1,56 @@
+{
+  "schema": "wide_fullpopulation_source_a_v1",
+  "status": "SOURCE_ONLY_UNBOUND",
+  "verified_actual_values": false,
+  "source_sha256": {
+    "scripts/train_wide_fullpopulation_a.py": "50fca12ad3e31ccc06d04ae445fdedb4adbb9b29b106d487c16a9ffe75cedf3d",
+    "scripts/run_wide_fullpopulation_a.py": "d9489ceceb3e4aee2496d63044279dfc14299b23acf021b53681bc8f414f2929",
+    "src/nlp_hw02/wide_fullpopulation_a.py": "513fc0dfce1bea5b4ffa042b10d67ef45ae23564d257f5460a71d439432c035c",
+    "configs/wide_fullpopulation_training_a.template.json": "ac5895d89f328f098f952b73ff98a109dd379daac87e414e6ebc98e3d909fb9e",
+    "configs/wide_fullpopulation_input_packet_a.template.json": "9849b3551b8666638490fb1f2b869c3585b2faa23f5d4cc65ce8756335e79435",
+    "src/nlp_hw02/wide_continuation_schedule_a.py": "9533ca39a5765a9b81403613f3f7649d2cba6e680e4d76d624a63b6857cefe9e",
+    "configs/wide_continuation_parent_a.template.json": "0a3bdd99660b497a26fb4f56595c4810577ed6b515397cf75d6640a78ba95345",
+    "src/nlp_hw02/wide_origin0_resume_a.py": "b0b3f497ae981df396226395cedbe764b1c302cd99b25128f41387a686446ed6",
+    "src/nlp_hw02/wide_scratch_recipe_a.py": "21df6a54934c346cdaab69378c41292fe0c150b4cb837aed634edc183e403de0",
+    "src/nlp_hw02/compile_engine_observer_a.py": "ff88ec5d7699f545c4ee43d15e920a9cbcaaa7d3f0189ca1a7d5ec97632abd84"
+  },
+  "donor_continuation": {
+    "path": "configs/wide_continuation_source_a_20261024.json",
+    "sha256": "c06cb47f65db0a295ba01e21dc80c2125af230ee3f4bd58316a429aaf8053053"
+  },
+  "donor_independent_review": {
+    "path": "reports/evidence/wide_continuation_source_a_20261024/independent_review.json",
+    "sha256": "a0c212340aca95cbd7a6b98b9e056dc920962b51a5082507eeefb50dd6abce18"
+  },
+  "plan": {
+    "path": "docs/plans/2026-10-24-wide-fullpopulation-continuation.md",
+    "sha256": "f98923a94eb42b04166faddc9ef2d1d481c5ff90e1547f850074a084038973af"
+  },
+  "supported_parent": "nativeGELU512B_origin0_endpoint_only",
+  "parameters": 30705728,
+  "unique_xsa_scalars": 64,
+  "counter_origin": 0,
+  "new_family": "wide_fullpopulation_continuation_a_v1",
+  "new_rows": 11811850,
+  "old_rows": 6000000,
+  "old_arrays_required": false,
+  "fullcache_origin": {
+    "kernel": "arsen4ikvar/nlp-hw02-full-cache-20261023a",
+    "numeric_id": 140306514,
+    "output_version": 1,
+    "driver_sha256": "2b0f4ac81662096de60904a4f78cbfe1bf1286b170589bab0855cc6733c5e172",
+    "terminal_sha256": "b412869f8f90b3e6d704a4f29e60c123b6e45f022587c43f1f59309ce5783655",
+    "coverage_sha256": "cb1bf0055deac938665d729b16b217a941bb15befb0adce9fb2be9dd67726e3b"
+  },
+  "cache_manifest_sha256": "695ad7d4acf0a9ff3b95249439ada6033fdc6db8693eaca33fbad1959fe9d9f9",
+  "new_sampler_seeds": null,
+  "actual_parent_model_H_device_deadline": null,
+  "new_schedule_modes": [
+    "absolute_isqrt",
+    "linear_cooldown"
+  ],
+  "same_parent_hardware_required": true,
+  "source_archive_built": false,
+  "provider_or_model_execution": false,
+  "future_descendant_and_inference_adapter": "Explicit new-family protocol validation required; not originalB or old6M data relabel"
+}

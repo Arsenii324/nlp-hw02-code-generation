@@ -1,0 +1,60 @@
+{
+  "schema": "wide_gelu768_origin0_resume_parent_a_v1",
+  "verified_actual_values": true,
+  "architecture": "gelu768",
+  "artifact_root": "/workspace/nlp-job-20261023a/gelu768-fullpopulation-stage-20261024a/parent",
+  "root_parent_acceptance": {
+    "path": "evidence/root_parent_acceptance_ROOT_ACCEPTED.json",
+    "sha256": "12b0fd9570e6b30bc1196e175bf67151b52908e299bdcb3295a781c693abc046"
+  },
+  "pointer": {
+    "path": "latest_checkpoint.json",
+    "sha256": "1b78721411699cb62b0ae05bc8d69f8d1069d0c21acf1eea000445094d2ef659"
+  },
+  "parent_contract": {
+    "path": "evidence/native_parent_contract.json",
+    "sha256": "e1ef1e729caa1e9dd19fc964bab4600a123a6c1cf4c6f2aec808a004d151da7a"
+  },
+  "parent_archive": {
+    "path": "evidence/source.bin",
+    "sha256": "5b7713f7e6a8a66c403853b9c0db4eab758f23f7dd3f9547051e7ddea81ae833"
+  },
+  "parent_source_freeze": {
+    "path": "evidence/parent_source_freeze_F.json",
+    "sha256": "f2223a305d46488662f3baf2877f03c5c82291a6322a0e4e344388671a4ab51b"
+  },
+  "projection": {
+    "data_stats.json": {
+      "path": "roles/data_stats.json",
+      "sha256": "a42b2b8aa5e6d444214f2b3b65219e8d604e432058c42c0b3ead1a5358a1fb67"
+    },
+    "last_training.pt": {
+      "path": "roles/last_training.pt",
+      "sha256": "2bbf9fb158fbcc7de68b82b11361e2878f80490484d8215ce038ded11e1eaa8e"
+    },
+    "metrics.json": {
+      "path": "roles/metrics.json",
+      "sha256": "2c35af9bf851cc906009af81e9e8c5031a82844aa7a1d5a273dd08c4ff861b37"
+    },
+    "model.pt": {
+      "path": "roles/model.pt",
+      "sha256": "8dc04cf33ed578929a7994f3bc387c371c91374283067723556faa7e8b4f87fb"
+    },
+    "run_config.json": {
+      "path": "roles/run_config.json",
+      "sha256": "f60d2d1b598341f6f0de8a81b6a51ba9fa9276666176af37f6fc543e2688b9d8"
+    },
+    "tokenizer.json": {
+      "path": "roles/tokenizer.json",
+      "sha256": "0fa06854a98e82cd520c13f4c670040c772fec38f2cd2cacb5de11130bc42d74"
+    },
+    "validation.json": {
+      "path": "roles/validation.json",
+      "sha256": "73ac2a8b8ea0c16c2eec38c219b62f46857cdfe3de7fab3cab64754aa8b4c24e"
+    },
+    "validation_legacy.json": {
+      "path": "roles/validation_legacy.json",
+      "sha256": "d6a922705f41486208f8f68199bd18ebb4dea74c3b04ab106aed48d4c5d0c7dd"
+    }
+  }
+}
