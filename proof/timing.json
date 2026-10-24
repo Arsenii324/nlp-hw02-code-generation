@@ -1,0 +1,67 @@
+{
+  "schema": "antigravity_mixture1166_two_model_execution_v6_v1",
+  "rows": 1919,
+  "candidate_count": 21109,
+  "candidates_per_question": 11,
+  "output_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+  "expected_output_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+  "output_reproduced": true,
+  "ordered_test_questions_sha256": "6dd86866b2ed86a09781b7f471fc2fce5c00975503c4a85f1ec959dae0b93279",
+  "ordered_codes_sha256": "d18199fc4ff58759021d27df39af64f6b902d2c6eeecd25eebf9a38b217c7d5d",
+  "candidate_pool_sha256": "0db7ecae6b7bb584d9e106e429ec74f051d263f51990724ece436a7b9b01a803",
+  "warmup": [
+    {
+      "rows": 4,
+      "samples": 8,
+      "seconds": 2.291655725999931,
+      "capped": 0,
+      "peak_allocated_bytes": 672267264,
+      "candidate_sha256": "531398dd079b9606d58cdd50da9d2a667b6d7bd68404cc5ed3dcd230ecef0767",
+      "prediction_sha256": "8ae2c3a5446b252faebbbe67c489a65ca04fd2f37a57d1b1c0f4234e6a82835f"
+    },
+    {
+      "rows": 4,
+      "samples": 3,
+      "seconds": 0.555403952000006,
+      "capped": 0,
+      "peak_allocated_bytes": 495135232,
+      "candidate_sha256": "be42afac580400e6716803123caa3cd2dc6091a55fe2bd6e47123f51b0711981",
+      "prediction_sha256": "74af75c1931008e7c398412bac84f91a59df7e222b698401aba30c51d8ab7505"
+    }
+  ],
+  "model_test_timings": [
+    {
+      "rows": 1919,
+      "samples": 8,
+      "seconds": 89.03196591200003,
+      "capped": 0,
+      "peak_allocated_bytes": 5546380800,
+      "candidate_sha256": "1affd9a2996604ce1a74c502a80e20d897512ce6da89c4ef74386ceaab4adc7e",
+      "prediction_sha256": "0e83af706e83eee87c01dd35d5e00d9ded514c74f8eaea6c558daafcd49234fe"
+    },
+    {
+      "rows": 1919,
+      "samples": 3,
+      "seconds": 27.037072744999932,
+      "capped": 0,
+      "peak_allocated_bytes": 2997472768,
+      "candidate_sha256": "982e68a4c0b171edd417a6e850aececea5179029194cca69a614a98c9f2fd6f8",
+      "prediction_sha256": "08006602fcd34334cc5cf58ec72babe9b696a475e24e03003e88bca2593c8e60"
+    }
+  ],
+  "generation_selection_serialization_seconds": 118.20942109199996,
+  "backend": {
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "visible_gpu_count": 1
+  },
+  "test_labels_read": false,
+  "validation_generated": false,
+  "promotion": false,
+  "notebook_seconds": 151.21103627799994,
+  "model_load_seconds": 15.05225558799998,
+  "syntax_errors": [],
+  "split": "test",
+  "prediction_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0"
+}

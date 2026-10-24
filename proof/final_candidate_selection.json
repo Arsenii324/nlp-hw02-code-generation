@@ -1,0 +1,46 @@
+{
+  "schema": "final_candidate_selection_20261024_v1",
+  "created_utc": "2026-10-24T19:28:32.849554+00:00",
+  "recommended_candidate": "submit/github-mixture-i-20261024/",
+  "basis": "Highest user-reported public result among currently qualified exact files; internal validation and full cold T4 qualification also available.",
+  "candidate": {
+    "method": "768 fullpopulation N8 + 512-new step662144 N3 numeric plurality, encoder-once grouped implementation",
+    "prediction_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+    "user_reported_public_score": "708/960 = 73.75%",
+    "execution_errors_reported_percent": 0.1,
+    "syntax_errors_reported_percent": 0,
+    "internal_supported_consensus": "1170/1529 (source: G; I test and candidate-pool hashes exactly match G; I was test-only)",
+    "cold_t4_clocks_seconds": {
+      "core": 118.20942109199996,
+      "executor": 151.29057306099992,
+      "notebook": 151.21103627799994,
+      "parent": 160.02262415400003
+    }
+  },
+  "comparators": [
+    {
+      "candidate": "C/H fullpopulation768 N8",
+      "public_score": "696/960 = 72.50% user-reported",
+      "internal": "1152/1529 from C",
+      "cold_parent_seconds": 142.017093575,
+      "qualified": true,
+      "package": "submit/github-72p50-20261024/"
+    },
+    {
+      "candidate": "J GELU512-new step662144 N16 q32",
+      "public_score": null,
+      "internal": "1142/1529",
+      "cold_parent_seconds": 162.01542534600003,
+      "qualified": true,
+      "status": "not selected; lower internal score than I and no public score"
+    }
+  ],
+  "decision_limits": [
+    "Public score is user-reported and bound to exact prediction SHA; not independently queried.",
+    "Public and internal populations differ; do not treat either score as guaranteed hidden-test performance.",
+    "I package contains no checkpoints; private mounted version1 candidate bundle remains required.",
+    "Canonical old512 notebook/checkpoint was not overwritten.",
+    "No agent GitHub push, bot submission, or official course submission was made."
+  ],
+  "public_score_evidence": "reports/evidence/public_score_20261024_qualified_mixture_i.json"
+}

@@ -1,0 +1,5 @@
+{"event": "canonical_cell_finished", "cell": 1, "elapsed_seconds": 0.10481250999998792}
+{"event": "canonical_cell_finished", "cell": 2, "elapsed_seconds": 30.10466028999997}
+{"event": "canonical_cell_finished", "cell": 3, "elapsed_seconds": 151.289734737}
+{"complete": true, "input_sha256": "84705c5cd4ceb8d35425782a0803232dd927b971fbb9af7b778ef7cadff6d9c0", "executed_code_cells": 3, "note": "Actual Python execution of staged code cells; no invented stream outputs or execution counts.", "elapsed_seconds": 151.29057306099992, "output_sha256": "467ef6ae220aed5d51a9f5dbe2af61795c31170133b4be41a61f454033e4e9a3"}
+CANONICAL_NOTEBOOK_EXECUTION_OK

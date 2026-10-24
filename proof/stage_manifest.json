@@ -1,0 +1,17 @@
+{
+  "schema": "final_inference_probe_20261024i",
+  "hypothesis": "encoder-once-per-question batching may reduce repeated encoder cost for higher sample counts; changed batch shapes and sampling draws require fresh validation and test evidence",
+  "files": {
+    "mixture_test.ipynb": "84705c5cd4ceb8d35425782a0803232dd927b971fbb9af7b778ef7cadff6d9c0",
+    "kernel/run.py": "5a4824963e6ca8a2de5907d38e4dbabc5b8897a58f1f0ccd4a9f24156bdc1b97",
+    "kernel/kernel-metadata.json": "2ee60945563d7a41bd7c8e8eeda8a8fdb4aa21348cc40980ac77f32d9fe32321"
+  },
+  "dataset_version": 1,
+  "dataset_private_readback_receipt": "reports/evidence/mixture1166_t4_proof_v13/private_readback_v2.json",
+  "validation_questions": 1792,
+  "test_questions": 1919,
+  "compute_seconds": 900,
+  "final_gpu_reserve_seconds": 7200,
+  "test_labels_read": false,
+  "provider_action": false
+}

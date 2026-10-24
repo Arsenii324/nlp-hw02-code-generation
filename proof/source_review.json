@@ -1,0 +1,47 @@
+{
+  "schema": "final_inference_probe_i_source_review_v1",
+  "stage": "artifacts/kaggle/final-inference-probe-20261024i",
+  "builder": "scripts/build_final_inference_probe_20261024i.py",
+  "scope": "Source/static only. No provider action, model load, notebook execution, or GPU run.",
+  "purpose": "Single cold mixture test run to isolate G model-load cost; direct mounted-path SHA+torch load, G sampler bytes and N8+N3 qbatch counts unchanged; only mixture test arm on child GPU0, no validation or standalone sibling. Expected G output hash is diagnostic for direct reproducibility.",
+  "checks": {
+    "builder_ast": "pass",
+    "notebook_ast_cells": 3,
+    "source_import_closure": "pass",
+    "runtime_source_byte_identical_to_g": true,
+    "models": [
+      {
+        "name": "768fp_n8",
+        "samples_per_question": 8,
+        "question_batch": 64
+      },
+      {
+        "name": "512_new_n3",
+        "samples_per_question": 3,
+        "question_batch": 128
+      }
+    ],
+    "only_mixture_test_notebook": true,
+    "parent_only_one_gpu0_mixture_test": true,
+    "direct_mounted_weight_load": "pass",
+    "tokenizer_payload_sha_guard": "pass",
+    "expected_output_hash": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+    "manifest_files": 3,
+    "manifest_self_listed": false,
+    "manifest_mismatches": []
+  },
+  "hashes": {
+    "builder_sha256": "975fbe2f419cdb62f86d6a03066f88301d1e818451d6fd937a129e0ab5652495",
+    "manifest_sha256": "1e5c3873e2f26427a064a4298d99259c1369c9b844242243222ed3647e8d6aac",
+    "driver_sha256": "5a4824963e6ca8a2de5907d38e4dbabc5b8897a58f1f0ccd4a9f24156bdc1b97",
+    "runtime_sha256": "30aa0d10c1e91d7208b6572fe776982071f25ba11c7c1aed2667efffddd57a4e",
+    "stage_files": {
+      "mixture_test.ipynb": "84705c5cd4ceb8d35425782a0803232dd927b971fbb9af7b778ef7cadff6d9c0",
+      "kernel/run.py": "5a4824963e6ca8a2de5907d38e4dbabc5b8897a58f1f0ccd4a9f24156bdc1b97",
+      "kernel/kernel-metadata.json": "2ee60945563d7a41bd7c8e8eeda8a8fdb4aa21348cc40980ac77f32d9fe32321"
+    }
+  },
+  "limitations": [
+    "No cold-clock or output-parity result exists until root separately accepts and runs this stage."
+  ]
+}

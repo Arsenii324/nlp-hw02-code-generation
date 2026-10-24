@@ -1,0 +1,17 @@
+{
+  "schema": "user_reported_public_score_v1",
+  "received_utc": "2026-10-24T19:27:08.752828+00:00",
+  "file": "submit/candidates-20261024/qualified_mixture_768n8_512n3_t4.jsonl",
+  "sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+  "public_correct": 708,
+  "public_total": 960,
+  "public_pass_at_1": 0.7375,
+  "execution_errors_reported_percent": 0.1,
+  "syntax_errors_reported_percent": 0,
+  "binding_basis": "user reply immediately after recommendation of exact qualified I mixture file; latest submitted-file interpretation",
+  "source": "user bot result, not independently queried",
+  "per_question_test_feedback_used_for_tuning": false,
+  "one_t4_parent_seconds": 160.02262415400003,
+  "internal_correct": 1170,
+  "internal_total": 1529
+}

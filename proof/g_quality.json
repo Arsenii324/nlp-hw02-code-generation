@@ -1,0 +1,143 @@
+{
+  "arms": {
+    "mixture": {
+      "test": {
+        "actual_output_equals_expected_hash": false,
+        "all_four_clocks_le_180": false,
+        "all_four_clocks_present_positive_finite": true,
+        "backend": {
+          "cuda": "12.8",
+          "gpu": "Tesla T4",
+          "torch": "2.10.0+cu128",
+          "visible_gpu_count": 1
+        },
+        "backend_one_visible_t4": true,
+        "candidate_pool_sha256": "0db7ecae6b7bb584d9e106e429ec74f051d263f51990724ece436a7b9b01a803",
+        "candidate_rows": 1919,
+        "clocks_seconds": {
+          "core_seconds": 121.38241633099994,
+          "executor_seconds": 223.70516707299998,
+          "notebook_seconds": 223.61364383499995,
+          "parent_inclusive_seconds": 230.027920075
+        },
+        "expected_output_sha256": null,
+        "ordered_test_question_digest_matches": true,
+        "output_reproduced_diagnostic": null,
+        "parent_children_reaped": true,
+        "parent_exit": 0,
+        "parent_status": "terminal",
+        "plurality_replay_matches_all_rows": true,
+        "prediction_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+        "rows": 1919,
+        "runtime_qualified": false,
+        "syntax_error_rows": 0,
+        "test_labels_not_read_confirmed": true,
+        "timing_sidecar_rows_and_hash_match": true
+      },
+      "validation": {
+        "accuracy": 0.7652060170045781,
+        "candidate_count_distribution": {
+          "11": 1792
+        },
+        "candidate_pool_sha256": "b44e5b3536869334d8b8f75cb8dfe4b851eb9fe153b1f381fb6e852b173399cf",
+        "correct": 1170,
+        "ordered_question_rows_match": true,
+        "plurality_replay_matches_all_rows": true,
+        "prediction_sha256": "92e0d66935d161ee8db2dabfc1a52643edd5021fb8f4700afec7575fc3a26766",
+        "rows": 1792,
+        "scored_correct": 1170,
+        "scored_rows": 1529,
+        "scored_unsupported": 2,
+        "scored_wrong_numeric": 357,
+        "selected_supported_rows_all": 1754,
+        "selected_unsupported_rows_all": 38,
+        "syntax_errors": 0,
+        "timing_seconds": 120.20022647099995,
+        "timing_validation_generated_flag": false
+      }
+    },
+    "standalone": {
+      "test": {
+        "actual_output_equals_expected_hash": false,
+        "all_four_clocks_le_180": false,
+        "all_four_clocks_present_positive_finite": true,
+        "backend": {
+          "cuda": "12.8",
+          "gpu": "Tesla T4",
+          "torch": "2.10.0+cu128",
+          "visible_gpu_count": 1
+        },
+        "backend_one_visible_t4": true,
+        "candidate_pool_sha256": "adc4e019ac929c528d49e067cc63469b095592b98c3f256c94a01c67c9590486",
+        "candidate_rows": 1919,
+        "clocks_seconds": {
+          "core_seconds": 144.91226401100005,
+          "executor_seconds": 243.43949515400004,
+          "notebook_seconds": 243.34940013999994,
+          "parent_inclusive_seconds": 248.03222309999995
+        },
+        "expected_output_sha256": null,
+        "ordered_test_question_digest_matches": true,
+        "output_reproduced_diagnostic": null,
+        "parent_children_reaped": true,
+        "parent_exit": 0,
+        "parent_status": "terminal",
+        "plurality_replay_matches_all_rows": true,
+        "prediction_sha256": "8d91512d4b909799fe0ed528d944d67247164495bc1485684c9c1ab188d77003",
+        "rows": 1919,
+        "runtime_qualified": false,
+        "syntax_error_rows": 0,
+        "test_labels_not_read_confirmed": true,
+        "timing_sidecar_rows_and_hash_match": true
+      },
+      "validation": {
+        "accuracy": 0.7553956834532374,
+        "candidate_count_distribution": {
+          "12": 1792
+        },
+        "candidate_pool_sha256": "87137a31cc52db0a57d6c464c7aea4f09614ed115614583b6a4059446151bc64",
+        "correct": 1155,
+        "ordered_question_rows_match": true,
+        "plurality_replay_matches_all_rows": true,
+        "prediction_sha256": "6f0eb6cb76dd1014cf8e4f935a098edcda584c59a6113acc2022266e04ed87ed",
+        "rows": 1792,
+        "scored_correct": 1155,
+        "scored_rows": 1529,
+        "scored_unsupported": 3,
+        "scored_wrong_numeric": 371,
+        "selected_supported_rows_all": 1747,
+        "selected_unsupported_rows_all": 45,
+        "syntax_errors": 4,
+        "timing_seconds": 147.3354339020001,
+        "timing_validation_generated_flag": false
+      }
+    }
+  },
+  "evaluator": {
+    "frozen_package_sha256": "e01078307ec395b41afe03b588e014b7498ee968ed6ed2f3d13f8105c45663d6",
+    "generated_code_executed": false,
+    "path": "src/nlp_hw02/arithmetic.py",
+    "sha256": "e01078307ec395b41afe03b588e014b7498ee968ed6ed2f3d13f8105c45663d6"
+  },
+  "parent_result_sha256": "bd24cb3c473832545a536ca74ad1144a0f8d989984aceb6472d900b11746029a",
+  "reference_consensus": {
+    "path": "reports/evidence/primary_reference_consensus.json",
+    "sha256": "deb96602c88b983ecfbf23738d2a64192057273798548ab61a7cdf7acfc7c119",
+    "supported_rows": 1529
+  },
+  "root": "/Users/a2mogus/build-projs/dl2-hse/nlp-hw02-code-generation/artifacts/kaggle/final-inference-probe-20261024g-recovered/final_probe",
+  "schema": "final_inference_probe_scoring_v1",
+  "test_labels_read": false,
+  "test_question_projection": {
+    "labels_read": false,
+    "ordered_question_sha256": "6dd86866b2ed86a09781b7f471fc2fce5c00975503c4a85f1ec959dae0b93279",
+    "package_sha256": "556f6df84c0a586725c50d9ca0b8bd47df7f01e1aaaa511c0b28e5ff181083bc",
+    "path_in_package": "test_questions.json",
+    "rows": 1919
+  },
+  "validation_questions": {
+    "path": "artifacts/paid-gelu768-validation-20261024a/final400k/inputs/validation_questions.json",
+    "rows": 1792,
+    "sha256": "83ea3ea9f449619e015d98e21b1c35ec2cc6d2edd01db0c026301e718014f04e"
+  }
+}

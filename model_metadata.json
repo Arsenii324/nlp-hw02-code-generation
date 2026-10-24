@@ -1,0 +1,113 @@
+{
+  "schema": "github_handin_two_model_mixture_metadata_v1",
+  "models": [
+    {
+      "name": "768_fullpopulation",
+      "architecture": "own768_gelu",
+      "selected_step": 528000,
+      "training_endpoint_step": 531072,
+      "validation_loss": 0.21149580623436748,
+      "model_sha256": "ea4f5bc5e72d418987bc8fe1439e0afc736a7ae51447aab5363a70d154bd6972",
+      "tokenizer_sha256": "0fa06854a98e82cd520c13f4c670040c772fec38f2cd2cacb5de11130bc42d74",
+      "training_contract": {
+        "path": "artifacts/native-gelu768-fullpopulation-bound-20261024a/training_contract_ROOT_BOUND.json",
+        "sha256": "788ea2646b7762e900ac742b81e26f15fafd2c794f2a6610872342c81faa43bd"
+      }
+    },
+    {
+      "name": "512_fullpopulation_new",
+      "architecture": "own512_gelu",
+      "selected_step": 662144,
+      "validation_loss": 0.22055138446033892,
+      "model_sha256": "fd5bbeeadc8f451a2d47c740d73a38e75d3e5cdb65b72194e5065a138c161462",
+      "training_contract": {
+        "path": "artifacts/native-fullpopulation-longer-bound-20261024b/training_contract_ROOT_BOUND.json",
+        "sha256": "63d0a966d0258236bd2e99f75da25f166a4fe7b7e68b8de871d40373b513bb8f"
+      }
+    }
+  ],
+  "configurations": {
+    "768_fullpopulation": {
+      "vocab_size": 2048,
+      "d_model": 768,
+      "heads": 12,
+      "encoder_layers": 4,
+      "decoder_layers": 4,
+      "ff": 3072,
+      "activation": "gelu",
+      "dropout": 0.1,
+      "max_source": 256,
+      "max_target": 192,
+      "exclusive_self_attention": false,
+      "learnable_xsa": true,
+      "loop_repeats": 1,
+      "share_loop_weights": true,
+      "residual_scale": 1.0,
+      "loop_order": "stack",
+      "loop_share_scope": "block",
+      "gated_repeats": false,
+      "repeat_residual_scale": 0.5
+    },
+    "512_fullpopulation_new": {
+      "vocab_size": 2048,
+      "d_model": 512,
+      "heads": 8,
+      "encoder_layers": 4,
+      "decoder_layers": 4,
+      "ff": 2048,
+      "activation": "gelu",
+      "dropout": 0.1,
+      "max_source": 256,
+      "max_target": 192,
+      "exclusive_self_attention": false,
+      "learnable_xsa": true,
+      "loop_repeats": 1,
+      "share_loop_weights": true,
+      "residual_scale": 1.0,
+      "loop_order": "stack",
+      "loop_share_scope": "block",
+      "gated_repeats": false,
+      "repeat_residual_scale": 0.5
+    }
+  },
+  "mounted_input": {
+    "kaggle_dataset": "arsen4ikvar/nlp-hw02-mixture1166-proof-20261024a-tools",
+    "dataset_version": 1,
+    "candidate_bundle": "candidate_bundle_v8",
+    "weights_in_package": false,
+    "tokenizer_sha256": "0fa06854a98e82cd520c13f4c670040c772fec38f2cd2cacb5de11130bc42d74"
+  },
+  "mixture_method": {
+    "sampling": "768 N8 plus 512-new N3; numeric plurality over all11 candidates",
+    "temperature": 0.8,
+    "top_k": 50,
+    "length_penalty": 0.6,
+    "seed": 20261002,
+    "batching": "encoder once per question; grouped expansion for candidate decoding; per-model question batches q64/q128"
+  },
+  "inference_artifact": {
+    "kernel": "arsen4ikvar/nlp-hw02-final-inference-probe-20261024i/1",
+    "notebook": "inference.ipynb",
+    "notebook_sha256": "84705c5cd4ceb8d35425782a0803232dd927b971fbb9af7b778ef7cadff6d9c0",
+    "prediction_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+    "rows": 1919,
+    "runtime_qualified": true,
+    "test_only_I_run": true,
+    "validation_score_source": "I is test-only; exact test prediction and candidate-pool SHAs match G mixture validation+test run; G quality receipt is included."
+  },
+  "user_reported_public_score": {
+    "correct": 708,
+    "total": 960,
+    "pass_at_1": 0.7375,
+    "execution_errors_reported_percent": 0.1,
+    "syntax_errors_reported_percent": 0,
+    "prediction_sha256": "f1c740584ce7d15b342fb69593390e614eb956b65fc864e9426216cb2dd143d0",
+    "evidence": "proof/user_reported_public_score.json",
+    "source": "User report; no independent public service query"
+  },
+  "selection": {
+    "recommended": true,
+    "receipt": "proof/final_candidate_selection.json",
+    "reason": "Highest user-reported public score among currently cold-T4-qualified candidates; exact prediction hash binding and under-180s proof included."
+  }
+}
